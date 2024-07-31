@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="_01ProyectoTresEnRaya.PopUpGanador"
+              CanBeDismissedByTappingOutsideOfPopup="True" Size="270,150">
+    <Grid x:Name="grido" ColumnDefinitions="2*,*" RowDefinitions="2*,*" Margin="40" BackgroundColor="DimGray">
+        <Label x:Name="lbl_info" VerticalOptions="Center" HorizontalOptions="End" Text="Ganador" FontSize="30" Margin="0,3,20,0" />
+        <Image x:Name="img_turno" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Aspect="AspectFit" Margin="20,0,20,0"/>
+        <Button Text="Aceptar" Grid.ColumnSpan="2" Grid.Row="1" HorizontalOptions="Center" VerticalOptions="Start" Clicked="Button_Clicked"/>
+    </Grid>
+</toolkit:Popup>

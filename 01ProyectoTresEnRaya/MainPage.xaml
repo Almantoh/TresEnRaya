@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_01ProyectoTresEnRaya.MainPage"
+             xmlns:cv="clr-namespace:Camera.MAUI;assembly=Camera.MAUI"
+             x:Name="contentPage">
+    <Grid RowDefinitions="6*,*,30*,*,5*,*,5*,*" ColumnDefinitions="*,20*,20*,*">
+        <Button x:Name="btn_reiniciar" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Green" Clicked="btn_reiniciar_Clicked"  Text="⟲" FontSize="25" FontAttributes="Bold" CornerRadius="10" HorizontalOptions="End" VerticalOptions="Center" Margin="0,0,20,0"/>
+        <Label x:Name="lbl_turno" Grid.Row="0" Grid.Column="1" VerticalOptions="Start" HorizontalOptions="End" Text="Turno de" FontSize="30" Margin="0,0,20,0" />
+        <ImageButton x:Name="img_turno" Grid.Row="0" Grid.Column="2" VerticalOptions="Start" HorizontalOptions="StartAndExpand" Aspect="AspectFit" Clicked="img_turno_Clicked"/>
+
+        <Grid x:Name="tablero" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" RowDefinitions="*,*,*" ColumnDefinitions="*,*,*" MaximumWidthRequest="380" RowSpacing="10" ColumnSpacing="10">
+            <ImageButton x:Name="lbl_23" Grid.Row="0" Grid.Column="1" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_33" Grid.Row="0" Grid.Column="2" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_13" Grid.Row="0" Grid.Column="0" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_22" Grid.Row="1" Grid.Column="1" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_32" Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_12" Grid.Row="1" Grid.Column="0" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_21" Grid.Row="2" Grid.Column="1" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_31" Grid.Row="2" Grid.Column="2" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+            <ImageButton x:Name="lbl_11" Grid.Row="2" Grid.Column="0" BackgroundColor="Gray" Clicked="BotonPulsado" Aspect="AspectFit" CornerRadius="20" />
+        </Grid>
+
+        <Button x:Name="btn_generar" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Text="Capturar" Clicked="btn_generar_Clicked" Margin="20,0" MaximumWidthRequest="800" />
+
+        <Button x:Name="btn_cargarImagen" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Text="Ver Resultado" Clicked="btn_cargarImagen_Clicked" Margin="20,0" MaximumWidthRequest="800" />
+    </Grid>
+</ContentPage>
